@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#122720">
+  <title>MINEFIELD — マインスイーパー</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header><a class="brand" href="./"><span class="brand-icon">✳</span> MINEFIELD</a><span class="edition">THE CLASSIC PUZZLE / 01</span></header>
+    <section class="intro"><p class="eyebrow">ひとマスずつ、ひらめこう。</p><h1>小さな盤面に、<br>大きな推理を。</h1><p class="subtitle">数字を手がかりに、すべての安全なマスを見つけよう。</p></section>
+    <section class="game" aria-label="マインスイーパー">
+      <div class="toolbar"><div class="difficulty" role="group" aria-label="難易度"><button data-level="easy" aria-pressed="true">初級 <small>9 × 9</small></button><button data-level="medium" aria-pressed="false">中級 <small>16 × 16</small></button><button data-level="hard" aria-pressed="false">上級 <small>30 × 16</small></button></div><button id="restart" class="restart">↻ <span>新しいゲーム</span></button></div>
+      <div class="stats"><div><span class="stat-label">⚑ 残りの地雷</span><strong id="remaining">10</strong></div><div><span class="stat-label">◷ タイム</span><strong><span id="timer">000</span><small> s</small></strong></div><div><span class="stat-label">☆ ベスト</span><strong id="best">—</strong></div></div>
+      <div class="board-area"><div id="board" role="group" aria-label="ゲーム盤面"></div></div>
+      <div class="game-footer"><p id="status" role="status" aria-live="polite">好きなマスを開いて、スタート。</p><button id="flag-mode" aria-pressed="false">⚑ 旗モード <span>OFF</span></button></div>
+    </section>
+    <section class="guide" aria-label="遊び方"><div><span class="step">01</span><h2>マスを開く</h2><p>クリック / タップで開きます。<br>最初の一手は必ず安全。</p></div><div><span class="step">02</span><h2>数字を読む</h2><p>数字は周囲8マスの地雷の数。<br>空白はまとめて開きます。</p></div><div><span class="step">03</span><h2>旗を立てる</h2><p>右クリック / 旗モードで目印を。<br>地雷以外をすべて開けばクリア。</p></div></section>
+    <footer class="page-footer"><span>MINEFIELD</span><span>あせらず、じっくり、一手ずつ。</span></footer>
+  </main>
+</body>
+</html>
